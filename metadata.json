@@ -1,0 +1,6 @@
+{
+  "name": "Smart Dialer Pro",
+  "description": "Local-first native Android phone dialer and contacts manager built with Kotlin, Jetpack Compose, Material 3, Room, and DataStore, featuring T9 search, dual-SIM awareness, and English/Bengali localization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

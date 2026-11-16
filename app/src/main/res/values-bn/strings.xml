@@ -1,0 +1,292 @@
+<resources>
+    <string name="app_name">Smart Dialer Pro</string>
+    <string name="app_version">সংস্করণ ১.০.০</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_favorites">প্রিয়</string>
+    <string name="nav_recents">সাম্প্রতিক</string>
+    <string name="nav_contacts">পরিচিতি</string>
+    <string name="nav_keypad">কীপ্যাড</string>
+
+    <!-- Common Actions & Menu -->
+    <string name="action_settings">সেটিংস</string>
+    <string name="action_default_dialer_status">ডিফল্ট ডায়ালার অবস্থা</string>
+    <string name="action_search">অনুসন্ধান</string>
+    <string name="action_clear_search">অনুসন্ধান মুছুন</string>
+    <string name="action_close">বন্ধ করুন</string>
+    <string name="action_back">ফিরে যান</string>
+    <string name="action_call">কল করুন</string>
+    <string name="action_call_contact">%1$s-কে কল করুন</string>
+    <string name="action_cancel">বাতিল</string>
+    <string name="action_save">সংরক্ষণ</string>
+    <string name="action_delete">মুছুন</string>
+    <string name="action_edit">সম্পাদনা</string>
+    <string name="action_confirm">নিশ্চিত করুন</string>
+    <string name="action_retry">আবার চেষ্টা করুন</string>
+    <string name="action_refresh">রিফ্রেশ</string>
+    <string name="action_more_options">আরও বিকল্প</string>
+    <string name="action_grant_permission">অনুমতি দিন</string>
+    <string name="action_open_settings">অ্যাপ সেটিংস খুলুন</string>
+    <string name="action_open_system_dialer">সিস্টেম ডায়ালার খুলুন</string>
+
+    <!-- Keypad Screen -->
+    <string name="keypad_enter_number">ফোন নম্বর লিখুন</string>
+    <string name="keypad_backspace">সংখ্যা মুছুন</string>
+    <string name="keypad_clear_all">সব মুছতে ধরে রাখুন</string>
+    <string name="keypad_call_button">কল করুন</string>
+    <string name="keypad_sim_selector">সিম নির্বাচন করুন</string>
+    <string name="keypad_sim_slot">সিম %1$d</string>
+    <string name="keypad_sim_default">ডিফল্ট সিম</string>
+    <string name="keypad_t9_match_label">সেরা মিল</string>
+    <string name="keypad_t9_more_matches">%1$d টি পরিচিতি মিলেছে</string>
+    <string name="keypad_add_to_contacts">পরিচিতিতে যোগ করুন</string>
+    <string name="keypad_hide_pad">কীপ্যাড লুকান</string>
+    <string name="keypad_show_pad">কীপ্যাড দেখান</string>
+    <string name="keypad_no_number_entered">কল করার জন্য একটি নম্বর লিখুন</string>
+    <string name="keypad_call_permission_title">কল করার অনুমতি প্রয়োজন</string>
+    <string name="keypad_call_permission_rationale">ফোন অনুমতি দেওয়া থাকলে Smart Dialer Pro সরাসরি কল করতে পারে, অথবা নম্বরসহ আপনার ডিভাইসের সিস্টেম ডায়ালার খুলবে।</string>
+    <string name="keypad_dial_fallback_notice">%1$s সহ সিস্টেম ডায়ালার খোলা হচ্ছে</string>
+
+    <!-- Favorites Screen -->
+    <string name="favorites_title">প্রিয় তালিকা</string>
+    <string name="favorites_section_device">তারকাচিহ্নিত পরিচিতি</string>
+    <string name="favorites_section_speed">দ্রুত প্রিয়</string>
+    <string name="favorites_empty_title">এখনও কোনো প্রিয় পরিচিতি নেই</string>
+    <string name="favorites_empty_subtitle">এক ট্যাপে কল করার জন্য আপনার নিয়মিত পরিচিতিগুলো এখানে যোগ করুন।</string>
+    <string name="favorites_add_button">প্রিয় যোগ করুন</string>
+    <string name="favorites_remove">প্রিয় থেকে সরান</string>
+    <string name="favorites_pick_title">একটি পরিচিতি বেছে নিন</string>
+    <string name="favorites_pick_empty">যোগ করার জন্য কোনো পরিচিতি পাওয়া যায়নি।</string>
+    <string name="favorites_added_msg">%1$s প্রিয় তালিকায় যোগ হয়েছে</string>
+    <string name="favorites_removed_msg">%1$s প্রিয় তালিকা থেকে সরানো হয়েছে</string>
+
+    <!-- Recents Screen -->
+    <string name="recents_title">সাম্প্রতিক কল</string>
+    <string name="recents_search_hint">কল ইতিহাস খুঁজুন</string>
+    <string name="recents_filter_all">সব</string>
+    <string name="recents_filter_missed">মিসড</string>
+    <string name="recents_filter_outgoing">আউটগোয়িং</string>
+    <string name="recents_filter_incoming">ইনকামিং</string>
+    <string name="recents_type_incoming">ইনকামিং</string>
+    <string name="recents_type_outgoing">আউটগোয়িং</string>
+    <string name="recents_type_missed">মিসড কল</string>
+    <string name="recents_type_rejected">প্রত্যাখ্যাত</string>
+    <string name="recents_type_voicemail">ভয়েসমেইল</string>
+    <string name="recents_type_unknown">কল</string>
+    <string name="recents_unknown_caller">অজানা নম্বর</string>
+    <string name="recents_empty_title">কোনো কল ইতিহাস নেই</string>
+    <string name="recents_empty_subtitle">কল করা বা রিসিভ করার পর আপনার ডিভাইসের প্রকৃত কল লগ এখানে দেখা যাবে।</string>
+    <string name="recents_filter_empty_title">মিলে যাওয়া কোনো কল নেই</string>
+    <string name="recents_filter_empty_subtitle">ফিল্টার বা অনুসন্ধান শব্দ পরিবর্তন করে দেখুন।</string>
+    <string name="recents_permission_title">কল লগ দেখার অনুমতি</string>
+    <string name="recents_permission_rationale">আপনার ডিভাইসের প্রকৃত ইনকামিং, আউটগোয়িং এবং মিসড কলের তালিকা শুধুমাত্র ফোনে দেখানোর জন্য Smart Dialer Pro-এর কল লগ অনুমতি প্রয়োজন।</string>
+    <string name="recents_permission_denied_title">কল লগ অনুমতি প্রত্যাখ্যাত</string>
+    <string name="recents_permission_denied_subtitle">কল লগ অনুমতি ছাড়া Smart Dialer Pro আপনার কল ইতিহাস পড়তে পারবে না। যেকোনো সময় অ্যাপ সেটিংস থেকে অনুমতি দিতে পারেন।</string>
+    <string name="recents_open_keypad">কীপ্যাড খুলুন</string>
+    <string name="recents_today">আজ</string>
+    <string name="recents_yesterday">গতকাল</string>
+
+    <!-- Contacts Screen -->
+    <string name="contacts_title">পরিচিতি</string>
+    <string name="contacts_search_hint">নাম বা নম্বর দিয়ে খুঁজুন</string>
+    <string name="contacts_my_profile">আমার প্রোফাইল</string>
+    <string name="contacts_my_profile_subtitle">স্থানীয় ডিভাইস ডায়ালার প্রোফাইল</string>
+    <string name="contacts_favorites_strip">প্রিয়</string>
+    <string name="contacts_see_all">সব দেখুন</string>
+    <string name="contacts_all_section">সব পরিচিতি</string>
+    <string name="contacts_count_label">%1$d টি পরিচিতি</string>
+    <string name="contacts_add_new">নতুন পরিচিতি</string>
+    <string name="contacts_empty_title">কোনো পরিচিতি পাওয়া যায়নি</string>
+    <string name="contacts_empty_subtitle">আপনার অনুসন্ধানের সাথে কোনো পরিচিতি মেলেনি অথবা ফোনের পরিচিতি তালিকা খালি।</string>
+    <string name="contacts_permission_title">পরিচিতি দেখার অনুমতি</string>
+    <string name="contacts_permission_rationale">নাম, ছবি, প্রিয় তালিকা এবং T9 কীপ্যাড সাজেশন দেখাতে Smart Dialer Pro আপনার ফোনের পরিচিতি স্থানীয়ভাবে পড়ে। এটি কখনো আপলোড করা হয় না।</string>
+    <string name="contacts_permission_denied_title">পরিচিতি অনুমতি প্রত্যাখ্যাত</string>
+    <string name="contacts_permission_denied_subtitle">আপনার ঠিকানা বই দেখতে ও খুঁজতে পরিচিতি অনুমতি প্রয়োজন। চালিয়ে যেতে অ্যাপ সেটিংসে অনুমতি সক্রিয় করুন।</string>
+    <string name="contacts_write_permission_title">পরিচিতি সম্পাদনার অনুমতি</string>
+    <string name="contacts_write_permission_rationale">ডিভাইসে সরাসরি পরিচিতি যোগ, সম্পাদনা বা মুছতে পরিচিতি লেখার অনুমতি দিন অথবা সিস্টেম পরিচিতি অ্যাপ ব্যবহার করুন।</string>
+    <string name="contacts_use_system_app">সিস্টেম পরিচিতি খুলুন</string>
+
+    <!-- Contact Details & Editor -->
+    <string name="contact_details_title">পরিচিতির বিবরণ</string>
+    <string name="contact_details_phone_numbers">ফোন নম্বরসমূহ</string>
+    <string name="contact_details_emails">ইমেইল ঠিকানা</string>
+    <string name="contact_details_organization">প্রতিষ্ঠান</string>
+    <string name="contact_details_notes">স্থানীয় নোট</string>
+    <string name="contact_details_favorite_add">প্রিয় করুন</string>
+    <string name="contact_details_favorite_remove">প্রিয় তালিকাভুক্ত</string>
+    <string name="contact_details_message">বার্তা</string>
+    <string name="contact_details_copy_number">নম্বর কপি করুন</string>
+    <string name="contact_details_copied">নম্বর কপি হয়েছে</string>
+    <string name="contact_details_delete_title">পরিচিতি মুছে ফেলবেন?</string>
+    <string name="contact_details_delete_message">এটি আপনার ডিভাইস থেকে %1$s-কে স্থায়ীভাবে মুছে ফেলবে। আপনি কি নিশ্চিত?</string>
+    <string name="contact_editor_add_title">নতুন পরিচিতি</string>
+    <string name="contact_editor_edit_title">পরিচিতি সম্পাদনা</string>
+    <string name="contact_editor_name_label">পূর্ণ নাম</string>
+    <string name="contact_editor_phone_label">ফোন নম্বর</string>
+    <string name="contact_editor_email_label">ইমেইল (ঐচ্ছিক)</string>
+    <string name="contact_editor_company_label">প্রতিষ্ঠান / পদবি (ঐচ্ছিক)</string>
+    <string name="contact_editor_pick_photo">ছবি নির্বাচন</string>
+    <string name="contact_editor_validation_error">অনুগ্রহ করে নাম এবং ফোন নম্বর উভয়ই লিখুন।</string>
+    <string name="contact_saved_success">পরিচিতি সংরক্ষিত হয়েছে</string>
+    <string name="contact_deleted_success">পরিচিতি মুছে ফেলা হয়েছে</string>
+    <string name="contact_operation_failed">পরিচিতি আপডেট করা যায়নি: %1$s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="settings_section_appearance">থিম ও প্রদর্শন</string>
+    <string name="settings_section_dialer">ডায়ালার ও আচরণ</string>
+    <string name="settings_section_language">ভাষা</string>
+    <string name="settings_section_privacy_system">গোপনীয়তা ও সিস্টেম</string>
+    <string name="settings_theme_title">থিম</string>
+    <string name="settings_theme_system">সিস্টেম ডিফল্ট</string>
+    <string name="settings_theme_light">লাইট মোড</string>
+    <string name="settings_theme_dark">ডার্ক মোড (AMOLED)</string>
+    <string name="settings_accent_title">অ্যাকসেন্ট রঙ</string>
+    <string name="settings_accent_blue">ওশান ব্লু</string>
+    <string name="settings_accent_green">এমেরাল্ড গ্রিন</string>
+    <string name="settings_accent_purple">রয়্যাল পার্পল</string>
+    <string name="settings_accent_amber">অ্যাম্বার গোল্ড</string>
+    <string name="settings_accent_dynamic">ডায়নামিক রঙ</string>
+    <string name="settings_font_size_title">ফন্টের আকার</string>
+    <string name="settings_font_small">ছোট</string>
+    <string name="settings_font_normal">স্বাভাবিক</string>
+    <string name="settings_font_large">বড়</string>
+    <string name="settings_font_extra_large">অতিরিক্ত বড়</string>
+    <string name="settings_vibration_title">কীপ্যাড ভাইব্রেশন</string>
+    <string name="settings_vibration_subtitle">সংখ্যা চাপার সময় হ্যাপটিক ফিডব্যাক</string>
+    <string name="settings_language_title">অ্যাপের ভাষা</string>
+    <string name="settings_language_system">সিস্টেম ডিফল্ট</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_bn">বাংলা (Bengali)</string>
+    <string name="settings_privacy_title">গোপনীয়তার তথ্য</string>
+    <string name="settings_privacy_subtitle">স্থানীয়-প্রথম নীতি ও অনুমতির স্বচ্ছতা</string>
+    <string name="settings_default_dialer_title">ডিফল্ট ডায়ালার অবস্থা</string>
+    <string name="settings_default_dialer_active">নিশ্চিতকৃত ডিফল্ট ফোন অ্যাপ</string>
+    <string name="settings_default_dialer_inactive">বর্তমানে ডিফল্ট ডায়ালার হিসেবে নির্ধারিত নয়</string>
+    <string name="settings_about_title">Smart Dialer Pro সম্পর্কে</string>
+    <string name="settings_about_subtitle">ধাপ ১ UI ও স্থানীয় আর্কিটেকচার ভিত্তি</string>
+
+    <!-- Privacy Info Screen -->
+    <string name="privacy_title">গোপনীয়তা ও সুরক্ষা</string>
+    <string name="privacy_hero_title">১০০% স্থানীয়-প্রথম আর্কিটেকচার</string>
+    <string name="privacy_hero_body">Smart Dialer Pro সম্পূর্ণভাবে আপনার ডিভাইসে চলে। এখানে কোনো ক্লাউড সার্ভার, অ্যানালিটিক্স ট্র্যাকার বা বহিরাগত ডেটা আপলোড নেই।</string>
+    <string name="privacy_perm_contacts_title">পরিচিতি অনুমতি</string>
+    <string name="privacy_perm_contacts_desc">শুধুমাত্র আপনার পরিচিতি, প্রিয় তালিকা, T9 সাজেশন দেখাতে এবং আপনার অনুমোদিত সম্পাদনা সংরক্ষণ করতে ব্যবহৃত হয়।</string>
+    <string name="privacy_perm_call_log_title">কল লগ অনুমতি</string>
+    <string name="privacy_perm_call_log_desc">আপনার ডিভাইসে সংরক্ষিত প্রকৃত কল ইতিহাস পড়তে ও ফিল্টার করতে ব্যবহৃত হয়।</string>
+    <string name="privacy_perm_phone_title">ফোন ও সিম অনুমতি</string>
+    <string name="privacy_perm_phone_desc">অনুমতি থাকলে সরাসরি কল করতে এবং ডুয়াল-সিম ডিভাইসে সিম স্লট শনাক্ত করতে ব্যবহৃত হয়।</string>
+    <string name="privacy_logging_title">সংবেদনশীল লগিং শূন্য</string>
+    <string name="privacy_logging_desc">ফোন নম্বর, নাম এবং কল ইতিহাস কখনো লগ ফাইলে লেখা হয় না বা Android-এর স্থানীয় প্রোভাইডারের বাইরে শেয়ার করা হয় না।</string>
+
+    <!-- Default Dialer Status Screen -->
+    <string name="dialer_status_title">ডিফল্ট ডায়ালার অবস্থা</string>
+    <string name="dialer_status_confirmed_title">ডিফল্ট ডায়ালার সক্রিয়</string>
+    <string name="dialer_status_confirmed_body">Android নিশ্চিত করেছে যে Smart Dialer Pro বর্তমানে ডিফল্ট ফোন/ডায়ালার ভূমিকা পালন করছে।</string>
+    <string name="dialer_status_not_default_title">ডিফল্ট ডায়ালার হিসেবে নির্ধারিত নয়</string>
+    <string name="dialer_status_not_default_body">Android জানিয়েছে যে অন্য একটি অ্যাপ (%1$s) বা সিস্টেম ডায়ালার বর্তমানে ডিফল্ট কল পরিচালনা করছে।</string>
+    <string name="dialer_status_phase_notice">ধাপ ১ বিজ্ঞপ্তি: পূর্ণ InCallService, ইনকামিং কল স্ক্রিন এবং ব্যাকগ্রাউন্ড কল ব্যবস্থাপনা ধাপ ২-এর জন্য নির্ধারিত। বর্তমানে কল করতে TelecomManager বা ACTION_DIAL নিরাপদভাবে ব্যবহৃত হয়।</string>
+    <string name="dialer_status_request_button">ডিফল্ট অবস্থা যাচাই / অনুরোধ করুন</string>
+    <string name="dialer_status_roadmap_title">পরিকল্পিত ধাপ ২ সুবিধাসমূহ</string>
+    <string name="dialer_status_roadmap_body">• RoleManager.ROLE_DIALER ও পূর্ণ InCallService\n• ইনকামিং ও চলমান কলের কাস্টম স্ক্রিন\n• স্পিড ডায়াল ও স্থানীয় নম্বর ব্লকিং\n• এনক্রিপ্টেড স্থানীয় ব্যাকআপ ও পুনরুদ্ধার\n• কেবল ডিভাইস-সমর্থিত কল রেকর্ডিং</string>
+    <string name="dialer_status_preview_title">ধাপ ২ ইনকামিং কল ব্লুপ্রিন্ট (শুধুমাত্র প্রিভিউ)</string>
+    <string name="dialer_status_preview_caption">ধাপ ২ InCallService-এর জন্য ডিজাইন প্রিভিউ — কোনো ভুয়া কল সক্রিয় নয়।</string>
+    <string name="call_preview_decline">প্রত্যাখ্যান</string>
+    <string name="call_preview_answer">উত্তর দিন</string>
+    <string name="recents_just_now">এইমাত্র</string>
+    <string name="recents_min_ago">%1$d মিনিট আগে</string>
+    <string name="recents_hr_ago">%1$d ঘণ্টা আগে</string>
+
+    <!-- Local Blocklist & Call Screening -->
+    <string name="blocklist_title">ব্লক করা নম্বর</string>
+    <string name="blocklist_menu_action">ব্লক করা নম্বর</string>
+    <string name="blocklist_settings_subtitle_active">%1$d টি ব্লক • কল স্ক্রিনিং সক্রিয়</string>
+    <string name="blocklist_settings_subtitle_inactive">%1$d টি ব্লক • কল স্ক্রিনিং চালু করুন</string>
+    <string name="blocklist_role_active_title">স্বয়ংক্রিয় কল প্রত্যাখ্যান সক্রিয়</string>
+    <string name="blocklist_role_active_body">Android নিশ্চিত করেছে Smart Dialer Pro-এর কল স্ক্রিনিং ভূমিকা সক্রিয়। আপনার ব্লকলিস্টের নম্বর থেকে আসা কল স্বয়ংক্রিয়ভাবে বাতিল হবে।</string>
+    <string name="blocklist_role_inactive_title">কল স্ক্রিনিং ভূমিকা প্রয়োজন</string>
+    <string name="blocklist_role_inactive_body">ব্লকলিস্টের কল স্বয়ংক্রিয়ভাবে প্রত্যাখ্যান করতে Android-এ Smart Dialer Pro-কে কল স্ক্রিনিং অনুমতি দিন।</string>
+    <string name="blocklist_enable_screening_button">কল স্ক্রিনিং চালু করুন</string>
+    <string name="blocklist_add_number">নম্বর ব্লক করুন</string>
+    <string name="blocklist_pick_from_contacts">পরিচিতি থেকে বেছে নিন</string>
+    <string name="blocklist_pick_empty">ফোন নম্বরযুক্ত সব পরিচিতি ইতোমধ্যে ব্লক করা হয়েছে অথবা কোনো পরিচিতি নেই।</string>
+    <string name="blocklist_number_label">ফোন নম্বর</string>
+    <string name="blocklist_name_label">লেবেল / কারণ (ঐচ্ছিক)</string>
+    <string name="blocklist_number_error">অনুগ্রহ করে একটি সঠিক ফোন নম্বর লিখুন।</string>
+    <string name="blocklist_empty_title">কোনো ব্লক করা নম্বর নেই</string>
+    <string name="blocklist_empty_subtitle">স্বয়ংক্রিয়ভাবে কল প্রত্যাখ্যান করতে এখানে নম্বর যোগ করুন অথবা পরিচিতি বা সাম্প্রতিক কল থেকে ব্লক করুন।</string>
+    <string name="blocklist_unblock">আনব্লক</string>
+    <string name="blocklist_block_action">ব্লক করুন</string>
+    <string name="blocklist_unblock_action">আনব্লক করুন</string>
+    <string name="blocklist_blocked_toast">%1$s ব্লকলিস্টে যোগ হয়েছে</string>
+    <string name="blocklist_unblocked_toast">%1$s ব্লকলিস্ট থেকে সরানো হয়েছে</string>
+    <string name="blocklist_recents_block_title">%1$s ব্লক করবেন?</string>
+    <string name="blocklist_recents_block_message">কল স্ক্রিনিং সক্রিয় থাকলে %1$s থেকে আসা কল Smart Dialer Pro স্বয়ংক্রিয়ভাবে প্রত্যাখ্যান করবে।</string>
+
+    <!-- Call Recording Settings -->
+    <string name="settings_section_call_recording">কল রেকর্ডিং</string>
+    <string name="settings_auto_recording_title">স্বয়ংক্রিয় কল রেকর্ডিং</string>
+    <string name="settings_auto_recording_subtitle">শুধুমাত্র Android ও ডিভাইস দ্বারা আনুষ্ঠানিকভাবে সমর্থিত হলে স্বয়ংক্রিয়ভাবে কল রেকর্ড করুন</string>
+    <string name="settings_recording_scope_title">কোন কল রেকর্ড হবে</string>
+    <string name="settings_recording_scope_all">সকল কল</string>
+    <string name="settings_recording_scope_all_desc">সংরক্ষিত ও অসংরক্ষিত সব নম্বর থেকে আসা-যাওয়া কল রেকর্ড করুন</string>
+    <string name="settings_recording_scope_unknown">শুধুমাত্র অজানা পরিচিতি</string>
+    <string name="settings_recording_scope_unknown_desc">শুধুমাত্র আপনার পরিচিতিতে সংরক্ষিত নয় এমন নম্বরের কল রেকর্ড করুন</string>
+    <string name="settings_recording_device_notice">রেকর্ডিং সুবিধা Android সংস্করণ, আঞ্চলিক নীতি ও সক্রিয় ডিফল্ট ডায়ালার অনুমতির ওপর নির্ভরশীল।</string>
+
+    <!-- Local Contacts Backup & Export -->
+    <string name="settings_section_backup">ব্যাকআপ ও এক্সপোর্ট</string>
+    <string name="settings_export_vcf_title">VCF (.vcf) হিসেবে পরিচিতি এক্সপোর্ট</string>
+    <string name="settings_export_vcf_subtitle">স্থানীয়ভাবে স্ট্যান্ডার্ড vCard 3.0 ব্যাকআপ সংরক্ষণ করুন</string>
+    <string name="settings_export_csv_title">CSV (.csv) হিসেবে পরিচিতি এক্সপোর্ট</string>
+    <string name="settings_export_csv_subtitle">নম্বর ও ইমেইলসহ স্প্রেডশিট-উপযোগী ব্যাকআপ সংরক্ষণ করুন</string>
+    <string name="settings_export_in_progress">স্থানীয় পরিচিতি ব্যাকআপ তৈরি হচ্ছে…</string>
+    <string name="settings_export_permission_title">পরিচিতি অনুমতি প্রয়োজন</string>
+    <string name="settings_export_permission_rationale">ডিভাইসে স্থানীয় CSV বা VCF ফাইলে পরিচিতি এক্সপোর্ট করতে Smart Dialer Pro-এর পরিচিতি পড়ার অনুমতি প্রয়োজন।</string>
+    <string name="settings_export_success">%1$dটি পরিচিতি %2$s ফাইলে এক্সপোর্ট হয়েছে</string>
+    <string name="settings_export_empty">এক্সপোর্ট করার মতো কোনো পরিচিতি পাওয়া যায়নি।</string>
+    <string name="settings_export_failed">পরিচিতি এক্সপোর্ট করা যায়নি: %1$s</string>
+
+    <!-- App Permissions Hub -->
+    <string name="settings_permissions_title">অ্যাপের অনুমতিসমূহ</string>
+    <string name="settings_permissions_subtitle_all_granted">সকল %1$dটি মূল ডায়ালার অনুমতি অনুমোদিত</string>
+    <string name="settings_permissions_subtitle_partial">%2$dটির মধ্যে %1$dটি মূল অনুমতি অনুমোদিত</string>
+    <string name="permissions_screen_title">অ্যাপের অনুমতিসমূহ</string>
+    <string name="permissions_summary_all_title">সকল মূল অনুমতি অনুমোদিত</string>
+    <string name="permissions_summary_partial_title">%2$dটির মধ্যে %1$dটি অনুমতি অনুমোদিত</string>
+    <string name="permissions_summary_body">Smart Dialer Pro শুধুমাত্র কলিং, পরিচিতি, কল লগ ও ডুয়াল-সিম শনাক্তকরণের জন্য প্রয়োজনীয় অনুমতি চায়। সব তথ্য আপনার ডিভাইসেই থাকে।</string>
+    <string name="permissions_grant_all_button">সকল অনুমতি দিন</string>
+    <string name="permissions_open_system_button">সিস্টেম সেটিংসে পরিচালনা করুন</string>
+    <string name="permissions_section_allowed">অনুমোদিত</string>
+    <string name="permissions_section_not_allowed">অনুমতি প্রয়োজন</string>
+    <string name="permissions_section_roles">Android সিস্টেম ভূমিকা</string>
+    <string name="permissions_section_zero_perm">অনুমতি-মুক্ত গোপনীয়তা API</string>
+    <string name="permissions_status_allowed">অনুমোদিত</string>
+    <string name="permissions_status_not_allowed">অনুমোদিত নয় • দিতে ট্যাপ করুন</string>
+    <string name="permissions_status_active">সক্রিয়</string>
+    <string name="permissions_status_inactive">নিষ্ক্রিয় • অনুরোধ করতে ট্যাপ করুন</string>
+    <string name="permissions_status_system_managed">কোনো রানটাইম অনুমতির প্রয়োজন নেই</string>
+    <string name="permissions_group_contacts_title">পরিচিতি ও অ্যাকাউন্ট</string>
+    <string name="permissions_group_contacts_desc">পরিচিতি দেখা ও সম্পাদনা, প্রিয় তালিকা, T9 ম্যাচিং এবং স্থানীয় VCF/CSV ব্যাকআপ।</string>
+    <string name="permissions_group_call_logs_title">কল লগ</string>
+    <string name="permissions_group_call_logs_desc">আপনার ডিভাইসের প্রকৃত ইনকামিং, আউটগোয়িং এবং মিসড কল ইতিহাস দেখা।</string>
+    <string name="permissions_group_phone_title">ফোন ও ডুয়াল-সিম</string>
+    <string name="permissions_group_phone_desc">TelecomManager-এর মাধ্যমে সরাসরি কল করা এবং সক্রিয় সিম স্লট শনাক্ত করা।</string>
+    <string name="permissions_role_dialer_title">ডিফল্ট ফোন অ্যাপ</string>
+    <string name="permissions_role_dialer_desc">tel: লিংক ও সিস্টেম ডায়ালার ভূমিকা পরিচালনা করা।</string>
+    <string name="permissions_role_screening_title">কল স্ক্রিনিং সেবা</string>
+    <string name="permissions_role_screening_desc">আপনার Room ব্লকলিস্টের নম্বর থেকে আসা কল স্বয়ংক্রিয়ভাবে প্রত্যাখ্যান করা।</string>
+    <string name="permissions_zero_photos_title">ছবি (Android Photo Picker)</string>
+    <string name="permissions_zero_photos_desc">পরিচিতির ছবির জন্য Android-এর Photo Picker ব্যবহৃত হয়, কোনো গ্যালারি অনুমতির প্রয়োজন নেই।</string>
+    <string name="permissions_zero_storage_title">ব্যাকআপ (Document Picker)</string>
+    <string name="permissions_zero_storage_desc">VCF ও CSV এক্সপোর্টের জন্য Storage Access Framework ব্যবহৃত হয়, বাড়তি স্টোরেজ অনুমতি ছাড়াই।</string>
+    <string name="permissions_zero_sms_title">SMS হস্তান্তর</string>
+    <string name="permissions_zero_sms_desc">SMS পড়া বা পাঠানোর অনুমতি ছাড়াই সরাসরি আপনার মেসেজিং অ্যাপ খোলে।</string>
+    <string name="permissions_zero_vibrate_title">কীপ্যাড ভাইব্রেশন</string>
+    <string name="permissions_zero_vibrate_desc">কীপ্যাড চাপার সময় স্বাভাবিক ইনস্টল-সময়ের হ্যাপটিক ফিডব্যাক।</string>
+    <string name="permissions_all_granted_snackbar">সকল মূল ডায়ালার অনুমতি অনুমোদিত হয়েছে</string>
+    <string name="permissions_partial_denied_snackbar">কিছু অনুমতি প্রত্যাখ্যাত হয়েছে। সিস্টেম সেটিংস থেকে চালু করতে পারেন।</string>
+    <string name="permissions_explain_all_title">মূল ডায়ালার অনুমতিসমূহ দিন</string>
+    <string name="permissions_explain_all_message">পরিচিতি, কল লগ, T9 ম্যাচ, ডুয়াল-সিম নির্বাচন ও সরাসরি কল করার জন্য Android আপনাকে পরিচিতি, কল লগ এবং ফোন অনুমতি দেওয়ার অনুরোধ করবে।</string>
+    <string name="permissions_manage_all_button">সকল অনুমতি পর্যালোচনা ও প্রদান করুন</string>
+</resources>

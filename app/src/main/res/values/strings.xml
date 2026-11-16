@@ -1,0 +1,292 @@
+<resources>
+    <string name="app_name">Smart Dialer Pro</string>
+    <string name="app_version">Version 1.0.0</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_recents">Recents</string>
+    <string name="nav_contacts">Contacts</string>
+    <string name="nav_keypad">Keypad</string>
+
+    <!-- Common Actions & Menu -->
+    <string name="action_settings">Settings</string>
+    <string name="action_default_dialer_status">Default dialer status</string>
+    <string name="action_search">Search</string>
+    <string name="action_clear_search">Clear search</string>
+    <string name="action_close">Close</string>
+    <string name="action_back">Back</string>
+    <string name="action_call">Call</string>
+    <string name="action_call_contact">Call %1$s</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_more_options">More options</string>
+    <string name="action_grant_permission">Grant Permission</string>
+    <string name="action_open_settings">Open App Settings</string>
+    <string name="action_open_system_dialer">Open System Dialer</string>
+
+    <!-- Keypad Screen -->
+    <string name="keypad_enter_number">Enter a phone number</string>
+    <string name="keypad_backspace">Delete digit</string>
+    <string name="keypad_clear_all">Long press to clear</string>
+    <string name="keypad_call_button">Place call</string>
+    <string name="keypad_sim_selector">Select SIM</string>
+    <string name="keypad_sim_slot">SIM %1$d</string>
+    <string name="keypad_sim_default">Default SIM</string>
+    <string name="keypad_t9_match_label">Top match</string>
+    <string name="keypad_t9_more_matches">%1$d matching contacts</string>
+    <string name="keypad_add_to_contacts">Add to contacts</string>
+    <string name="keypad_hide_pad">Hide keypad</string>
+    <string name="keypad_show_pad">Show keypad</string>
+    <string name="keypad_no_number_entered">Enter a number to call</string>
+    <string name="keypad_call_permission_title">Call Permission Needed</string>
+    <string name="keypad_call_permission_rationale">Smart Dialer Pro can place calls directly when Phone permission is granted, or open your device\'s system dialer with the number pre-filled.</string>
+    <string name="keypad_dial_fallback_notice">Opening system dialer with %1$s</string>
+
+    <!-- Favorites Screen -->
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_section_device">Starred Contacts</string>
+    <string name="favorites_section_speed">Quick Favorites</string>
+    <string name="favorites_empty_title">No Favorites Yet</string>
+    <string name="favorites_empty_subtitle">Add your frequently called contacts here for one-tap calling.</string>
+    <string name="favorites_add_button">Add Favorite</string>
+    <string name="favorites_remove">Remove from Favorites</string>
+    <string name="favorites_pick_title">Choose a Contact</string>
+    <string name="favorites_pick_empty">No contacts available to add.</string>
+    <string name="favorites_added_msg">%1$s added to favorites</string>
+    <string name="favorites_removed_msg">%1$s removed from favorites</string>
+
+    <!-- Recents Screen -->
+    <string name="recents_title">Recents</string>
+    <string name="recents_search_hint">Search call history</string>
+    <string name="recents_filter_all">All</string>
+    <string name="recents_filter_missed">Missed</string>
+    <string name="recents_filter_outgoing">Outgoing</string>
+    <string name="recents_filter_incoming">Incoming</string>
+    <string name="recents_type_incoming">Incoming</string>
+    <string name="recents_type_outgoing">Outgoing</string>
+    <string name="recents_type_missed">Missed call</string>
+    <string name="recents_type_rejected">Rejected</string>
+    <string name="recents_type_voicemail">Voicemail</string>
+    <string name="recents_type_unknown">Call</string>
+    <string name="recents_unknown_caller">Unknown number</string>
+    <string name="recents_empty_title">No Call History</string>
+    <string name="recents_empty_subtitle">Your device\'s real call log entries will appear here once calls are made or received.</string>
+    <string name="recents_filter_empty_title">No Matching Calls</string>
+    <string name="recents_filter_empty_subtitle">Try changing the active call filter or search query.</string>
+    <string name="recents_permission_title">Access Device Call Log</string>
+    <string name="recents_permission_rationale">Smart Dialer Pro needs Call Log permission strictly to display your device\'s real incoming, outgoing, and missed call history locally. Call records never leave your phone.</string>
+    <string name="recents_permission_denied_title">Call Log Permission Denied</string>
+    <string name="recents_permission_denied_subtitle">Without Call Log permission, Smart Dialer Pro cannot read your device call history. You can grant permission in App Settings at any time.</string>
+    <string name="recents_open_keypad">Open Keypad</string>
+    <string name="recents_today">Today</string>
+    <string name="recents_yesterday">Yesterday</string>
+
+    <!-- Contacts Screen -->
+    <string name="contacts_title">Contacts</string>
+    <string name="contacts_search_hint">Search name or number</string>
+    <string name="contacts_my_profile">My Profile</string>
+    <string name="contacts_my_profile_subtitle">Local device dialer profile</string>
+    <string name="contacts_favorites_strip">Favorites</string>
+    <string name="contacts_see_all">See all</string>
+    <string name="contacts_all_section">All Contacts</string>
+    <string name="contacts_count_label">%1$d contacts</string>
+    <string name="contacts_add_new">Add Contact</string>
+    <string name="contacts_empty_title">No Contacts Found</string>
+    <string name="contacts_empty_subtitle">No contacts match your search, or your device address book is empty.</string>
+    <string name="contacts_permission_title">Access Device Contacts</string>
+    <string name="contacts_permission_rationale">Smart Dialer Pro reads your device contacts locally to show names, photos, favorites, and T9 keypad matches. Your contacts are never uploaded or shared.</string>
+    <string name="contacts_permission_denied_title">Contacts Permission Denied</string>
+    <string name="contacts_permission_denied_subtitle">Contacts permission is required to view and search your address book. Enable it in App Settings to continue.</string>
+    <string name="contacts_write_permission_title">Contacts Edit Permission</string>
+    <string name="contacts_write_permission_rationale">To add, edit, or delete contacts directly on your device, please allow Write Contacts permission or use your system Contacts app.</string>
+    <string name="contacts_use_system_app">Open System Contacts</string>
+
+    <!-- Contact Details & Editor -->
+    <string name="contact_details_title">Contact Details</string>
+    <string name="contact_details_phone_numbers">Phone Numbers</string>
+    <string name="contact_details_emails">Email Addresses</string>
+    <string name="contact_details_organization">Organization</string>
+    <string name="contact_details_notes">Local Dialer Note</string>
+    <string name="contact_details_favorite_add">Favorite</string>
+    <string name="contact_details_favorite_remove">Favorited</string>
+    <string name="contact_details_message">Message</string>
+    <string name="contact_details_copy_number">Copy number</string>
+    <string name="contact_details_copied">Number copied</string>
+    <string name="contact_details_delete_title">Delete Contact?</string>
+    <string name="contact_details_delete_message">This will permanently delete %1$s from your device contacts. Are you sure you want to continue?</string>
+    <string name="contact_editor_add_title">New Contact</string>
+    <string name="contact_editor_edit_title">Edit Contact</string>
+    <string name="contact_editor_name_label">Full Name</string>
+    <string name="contact_editor_phone_label">Phone Number</string>
+    <string name="contact_editor_email_label">Email (Optional)</string>
+    <string name="contact_editor_company_label">Company / Label (Optional)</string>
+    <string name="contact_editor_pick_photo">Pick Photo</string>
+    <string name="contact_editor_validation_error">Please enter both a name and phone number.</string>
+    <string name="contact_saved_success">Contact saved</string>
+    <string name="contact_deleted_success">Contact deleted</string>
+    <string name="contact_operation_failed">Could not update contact: %1$s</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_appearance">Appearance &amp; Display</string>
+    <string name="settings_section_dialer">Dialer &amp; Interaction</string>
+    <string name="settings_section_language">Language</string>
+    <string name="settings_section_privacy_system">Privacy &amp; System</string>
+    <string name="settings_theme_title">Theme</string>
+    <string name="settings_theme_system">System Default</string>
+    <string name="settings_theme_light">Light Mode</string>
+    <string name="settings_theme_dark">Dark Mode (AMOLED)</string>
+    <string name="settings_accent_title">Accent Color</string>
+    <string name="settings_accent_blue">Ocean Blue</string>
+    <string name="settings_accent_green">Emerald Green</string>
+    <string name="settings_accent_purple">Royal Purple</string>
+    <string name="settings_accent_amber">Amber Gold</string>
+    <string name="settings_accent_dynamic">Dynamic Color</string>
+    <string name="settings_font_size_title">Font Size</string>
+    <string name="settings_font_small">Small</string>
+    <string name="settings_font_normal">Normal</string>
+    <string name="settings_font_large">Large</string>
+    <string name="settings_font_extra_large">Extra Large</string>
+    <string name="settings_vibration_title">Dialpad Vibration</string>
+    <string name="settings_vibration_subtitle">Haptic feedback when tapping keypad digits</string>
+    <string name="settings_language_title">App Language</string>
+    <string name="settings_language_system">System Default</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_bn">বাংলা (Bengali)</string>
+    <string name="settings_privacy_title">Privacy Information</string>
+    <string name="settings_privacy_subtitle">Local-first policy and permission transparency</string>
+    <string name="settings_default_dialer_title">Default Dialer Status</string>
+    <string name="settings_default_dialer_active">Confirmed default phone app</string>
+    <string name="settings_default_dialer_inactive">Not currently set as default dialer</string>
+    <string name="settings_about_title">About Smart Dialer Pro</string>
+    <string name="settings_about_subtitle">Phase 1 UI &amp; local architecture foundation</string>
+
+    <!-- Privacy Info Screen -->
+    <string name="privacy_title">Privacy &amp; Security</string>
+    <string name="privacy_hero_title">100% Local-First Architecture</string>
+    <string name="privacy_hero_body">Smart Dialer Pro runs entirely on your device. There are no cloud servers, no analytics trackers, and no external contact or call log uploads.</string>
+    <string name="privacy_perm_contacts_title">Contacts Permission</string>
+    <string name="privacy_perm_contacts_desc">Used strictly to display your contacts, favorites, T9 keypad suggestions, and save edits you explicitly confirm.</string>
+    <string name="privacy_perm_call_log_title">Call Log Permission</string>
+    <string name="privacy_perm_call_log_desc">Used strictly to read and filter real call history records stored by Android on your device.</string>
+    <string name="privacy_perm_phone_title">Phone &amp; SIM State Permission</string>
+    <string name="privacy_perm_phone_desc">Used to place calls when permitted and detect multi-SIM slots on dual-SIM devices.</string>
+    <string name="privacy_logging_title">Zero Sensitive Logging</string>
+    <string name="privacy_logging_desc">Phone numbers, contact names, and call logs are never written to diagnostic logs or shared outside Android\'s local ContentProviders.</string>
+
+    <!-- Default Dialer Status Screen -->
+    <string name="dialer_status_title">Default Dialer Status</string>
+    <string name="dialer_status_confirmed_title">Default Dialer Active</string>
+    <string name="dialer_status_confirmed_body">Android confirms that Smart Dialer Pro currently holds the default Phone/Dialer role.</string>
+    <string name="dialer_status_not_default_title">Not Set as Default Dialer</string>
+    <string name="dialer_status_not_default_body">Android reports that another app (%1$s) or the system dialer currently handles default phone calls.</string>
+    <string name="dialer_status_phase_notice">Phase 1 Notice: Full InCallService, incoming call screens, and background call management are scheduled for Phase 2. Outgoing calls currently use TelecomManager or ACTION_DIAL safely.</string>
+    <string name="dialer_status_request_button">Check / Request Default Role</string>
+    <string name="dialer_status_roadmap_title">Planned Phase 2 Capabilities</string>
+    <string name="dialer_status_roadmap_body">• RoleManager.ROLE_DIALER &amp; full InCallService\n• Incoming &amp; ongoing custom call UI\n• Speed dial &amp; local number blocking\n• Local encrypted backup &amp; restore\n• Official device-supported call recording only</string>
+    <string name="dialer_status_preview_title">Phase 2 Incoming Call Blueprint (Preview Only)</string>
+    <string name="dialer_status_preview_caption">Visual design preview for Phase 2 InCallService — no simulated calls are active.</string>
+    <string name="call_preview_decline">Decline</string>
+    <string name="call_preview_answer">Answer</string>
+    <string name="recents_just_now">Just now</string>
+    <string name="recents_min_ago">%1$d min ago</string>
+    <string name="recents_hr_ago">%1$d hr ago</string>
+
+    <!-- Local Blocklist & Call Screening -->
+    <string name="blocklist_title">Blocked Numbers</string>
+    <string name="blocklist_menu_action">Blocked numbers</string>
+    <string name="blocklist_settings_subtitle_active">%1$d blocked • Call screening active</string>
+    <string name="blocklist_settings_subtitle_inactive">%1$d blocked • Enable screening role</string>
+    <string name="blocklist_role_active_title">Automatic Call Rejection Active</string>
+    <string name="blocklist_role_active_body">Android confirms Smart Dialer Pro holds the Call Screening role. Incoming calls matching your Room blocklist are automatically rejected.</string>
+    <string name="blocklist_role_inactive_title">Call Screening Role Required</string>
+    <string name="blocklist_role_inactive_body">To automatically reject incoming calls from your blocklist, grant Smart Dialer Pro the Call Screening role in Android.</string>
+    <string name="blocklist_enable_screening_button">Enable Call Screening</string>
+    <string name="blocklist_add_number">Block a Number</string>
+    <string name="blocklist_pick_from_contacts">Pick from Contacts</string>
+    <string name="blocklist_pick_empty">All contacts with phone numbers are already blocked or none were found.</string>
+    <string name="blocklist_number_label">Phone Number</string>
+    <string name="blocklist_name_label">Label / Note (Optional)</string>
+    <string name="blocklist_number_error">Please enter a valid phone number.</string>
+    <string name="blocklist_empty_title">No Blocked Numbers</string>
+    <string name="blocklist_empty_subtitle">Add phone numbers here or block a caller from Contacts or Recents to reject incoming calls automatically.</string>
+    <string name="blocklist_unblock">Unblock</string>
+    <string name="blocklist_block_action">Block</string>
+    <string name="blocklist_unblock_action">Unblock</string>
+    <string name="blocklist_blocked_toast">%1$s added to blocklist</string>
+    <string name="blocklist_unblocked_toast">%1$s removed from blocklist</string>
+    <string name="blocklist_recents_block_title">Block %1$s?</string>
+    <string name="blocklist_recents_block_message">Incoming calls from %1$s will be automatically rejected by Smart Dialer Pro when Call Screening is active.</string>
+
+    <!-- Call Recording Settings -->
+    <string name="settings_section_call_recording">Call Recording</string>
+    <string name="settings_auto_recording_title">Automatic Call Recording</string>
+    <string name="settings_auto_recording_subtitle">Record calls automatically only where officially supported by Android and your device</string>
+    <string name="settings_recording_scope_title">Calls to Record</string>
+    <string name="settings_recording_scope_all">All calls</string>
+    <string name="settings_recording_scope_all_desc">Record incoming and outgoing calls from saved and unsaved numbers</string>
+    <string name="settings_recording_scope_unknown">Unknown contacts only</string>
+    <string name="settings_recording_scope_unknown_desc">Record only calls from numbers not saved in your contacts</string>
+    <string name="settings_recording_device_notice">Availability depends on Android OS support, regional regulations, and active default dialer permissions.</string>
+
+    <!-- Local Contacts Backup & Export -->
+    <string name="settings_section_backup">Backup &amp; Export</string>
+    <string name="settings_export_vcf_title">Export Contacts as VCF (.vcf)</string>
+    <string name="settings_export_vcf_subtitle">Save a standard vCard 3.0 backup locally</string>
+    <string name="settings_export_csv_title">Export Contacts as CSV (.csv)</string>
+    <string name="settings_export_csv_subtitle">Save a spreadsheet-friendly backup with numbers and emails</string>
+    <string name="settings_export_in_progress">Preparing local contact backup…</string>
+    <string name="settings_export_permission_title">Contacts Permission Needed</string>
+    <string name="settings_export_permission_rationale">Smart Dialer Pro needs permission to read your contacts so it can export them to a local CSV or VCF file on your device.</string>
+    <string name="settings_export_success">%1$d contacts exported to %2$s</string>
+    <string name="settings_export_empty">No device contacts found to export.</string>
+    <string name="settings_export_failed">Could not export contacts: %1$s</string>
+
+    <!-- App Permissions Hub -->
+    <string name="settings_permissions_title">App Permissions</string>
+    <string name="settings_permissions_subtitle_all_granted">All %1$d core dialer permissions allowed</string>
+    <string name="settings_permissions_subtitle_partial">%1$d of %2$d core permissions allowed</string>
+    <string name="permissions_screen_title">App Permissions</string>
+    <string name="permissions_summary_all_title">All Core Permissions Allowed</string>
+    <string name="permissions_summary_partial_title">%1$d of %2$d Permissions Allowed</string>
+    <string name="permissions_summary_body">Smart Dialer Pro only requests permissions needed for calling, contacts, call logs, and dual-SIM detection. Everything stays local on your device.</string>
+    <string name="permissions_grant_all_button">Grant All Permissions</string>
+    <string name="permissions_open_system_button">Manage in System Settings</string>
+    <string name="permissions_section_allowed">Allowed</string>
+    <string name="permissions_section_not_allowed">Needs Permission</string>
+    <string name="permissions_section_roles">Android System Roles</string>
+    <string name="permissions_section_zero_perm">Built-In Zero-Permission Privacy APIs</string>
+    <string name="permissions_status_allowed">Allowed</string>
+    <string name="permissions_status_not_allowed">Not allowed • Tap to grant</string>
+    <string name="permissions_status_active">Active</string>
+    <string name="permissions_status_inactive">Not active • Tap to request</string>
+    <string name="permissions_status_system_managed">No runtime permission required</string>
+    <string name="permissions_group_contacts_title">Contacts &amp; Accounts</string>
+    <string name="permissions_group_contacts_desc">Read and edit contacts, favorites, T9 keypad matching, and local VCF/CSV backups.</string>
+    <string name="permissions_group_call_logs_title">Call Logs</string>
+    <string name="permissions_group_call_logs_desc">Read your device\'s real incoming, outgoing, and missed call history.</string>
+    <string name="permissions_group_phone_title">Phone &amp; Dual-SIM</string>
+    <string name="permissions_group_phone_desc">Place calls directly via TelecomManager and detect active SIM slots.</string>
+    <string name="permissions_role_dialer_title">Default Phone App</string>
+    <string name="permissions_role_dialer_desc">Handle tel: links and system dialer role integration.</string>
+    <string name="permissions_role_screening_title">Call Screening Service</string>
+    <string name="permissions_role_screening_desc">Automatically reject incoming calls from numbers in your Room blocklist.</string>
+    <string name="permissions_zero_photos_title">Photos (Android Photo Picker)</string>
+    <string name="permissions_zero_photos_desc">Contact photos use Android\'s privacy-preserving Photo Picker with zero gallery permission.</string>
+    <string name="permissions_zero_storage_title">Backups (Document Picker)</string>
+    <string name="permissions_zero_storage_desc">VCF and CSV exports use Android\'s Storage Access Framework with zero broad storage access.</string>
+    <string name="permissions_zero_sms_title">SMS Handoff</string>
+    <string name="permissions_zero_sms_desc">Opens your messaging app via system intent without reading or sending SMS directly.</string>
+    <string name="permissions_zero_vibrate_title">Keypad Haptics</string>
+    <string name="permissions_zero_vibrate_desc">Normal install-time vibration feedback when tapping keypad keys.</string>
+    <string name="permissions_all_granted_snackbar">All core dialer permissions are allowed</string>
+    <string name="permissions_partial_denied_snackbar">Some permissions were denied. You can enable them in System Settings.</string>
+    <string name="permissions_explain_all_title">Allow Core Dialer Permissions</string>
+    <string name="permissions_explain_all_message">Android will prompt you to allow Contacts, Call Logs, and Phone &amp; SIM permissions so Smart Dialer Pro can display your contacts, call history, T9 matches, dual-SIM selector, and direct calling.</string>
+    <string name="permissions_manage_all_button">Review &amp; Grant All Permissions</string>
+</resources>
