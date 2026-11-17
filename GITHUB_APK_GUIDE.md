@@ -6,8 +6,8 @@ This guide explains how to automatically build and download **Smart Dialer Pro**
 
 ## 1. Prerequisites Included in This Repository
 
-- **Gradle Version:** Configured via `gradle/wrapper/gradle-wrapper.properties` (**Gradle 9.3.1**). Because `gradlew` is not committed in the template export, the included GitHub Actions workflow installs Gradle `9.3.1` directly via `gradle/actions/setup-gradle@v4`.
-- **Android SDK & Java:** Targets `compileSdk 36` / `targetSdk 36` / `minSdk 26` and builds cleanly on **JDK 17** (`temurin`).
+- **Gradle Version:** Configured via `gradle/wrapper/gradle-wrapper.properties` (**Gradle 9.3.1**). Because `gradlew` is not committed in the template export, the included GitHub Actions workflow installs Gradle `9.3.1` directly via `gradle/actions/setup-gradle@v6`.
+- **Android SDK & Java:** Targets `compileSdk 36` (`minorApiLevel = 1` / `android-36.1`) / `targetSdk 36` / `minSdk 26` and builds on **JDK 21** (`temurin`), automatically accepting Android SDK licenses and installing `platforms;android-36.1` in CI.
 - **Debug Keystore:** `debug.keystore.base64` is tracked in the repository root and automatically decoded during CI builds so debug APKs match your Firebase-registered SHA-1/SHA-256 fingerprint.
 - **Release Signing Variables (`app/build.gradle.kts`):**
   - `KEYSTORE_PATH` (defaults to `${rootDir}/my-upload-key.jks`)
