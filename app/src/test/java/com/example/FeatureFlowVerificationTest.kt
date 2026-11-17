@@ -161,4 +161,23 @@ class FeatureFlowVerificationTest {
         composeRule.waitForIdle()
         composeRule.onNodeWithText("Allow Core Dialer Permissions").assertIsDisplayed()
     }
+
+    @Test
+    fun `settings opens cloud sync screen showing Google sign in gate when signed out`() {
+        composeRule.waitForIdle()
+
+        composeRule.onNodeWithTag("top_bar_overflow_button").performClick()
+        composeRule.waitForIdle()
+        composeRule.onNodeWithTag("menu_settings_item").performClick()
+        composeRule.waitForIdle()
+
+        composeRule.onNodeWithTag("settings_cloud_sync_row")
+            .performScrollTo()
+            .performClick()
+        composeRule.waitForIdle()
+
+        composeRule.onNodeWithTag("google_sign_in_button")
+            .performScrollTo()
+            .assertIsDisplayed()
+    }
 }

@@ -1,0 +1,192 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Authenticated user's cloud sync profile and dialer backup metadata.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Authentication UID of the profile owner."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name from Google Sign-In."
+        },
+        "email": {
+          "type": "string",
+          "description": "Optional email address from Google Sign-In."
+        },
+        "autoCallRecordingEnabled": {
+          "type": "boolean",
+          "description": "Synced preference for automatic call recording."
+        },
+        "callRecordingScope": {
+          "type": "string",
+          "enum": ["ALL_CALLS", "UNKNOWN_CONTACTS_ONLY"],
+          "description": "Synced preference for which calls are eligible for automatic recording."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the profile was created (FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the profile was last updated (FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "displayName",
+        "autoCallRecordingEnabled",
+        "callRecordingScope",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "SyncedBlockedNumber": {
+      "title": "SyncedBlockedNumber",
+      "description": "User's blocked phone number synced from local Room blocklist.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Authentication UID of the owner."
+        },
+        "normalizedNumber": {
+          "type": "string",
+          "description": "Normalized phone number digits."
+        },
+        "displayLabel": {
+          "type": "string",
+          "description": "Optional caller label or reason."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp (FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp (FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "normalizedNumber",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "SyncedFavoriteContact": {
+      "title": "SyncedFavoriteContact",
+      "description": "User's starred quick-favorite contact synced to Firestore.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Authentication UID of the owner."
+        },
+        "lookupKey": {
+          "type": "string",
+          "description": "Device contact lookup key."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Contact display name."
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "Primary phone number."
+        },
+        "speedDialSlot": {
+          "type": "integer",
+          "description": "Optional speed dial slot 1-9."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp (FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp (FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "lookupKey",
+        "displayName",
+        "phoneNumber",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "SyncedContactNote": {
+      "title": "SyncedContactNote",
+      "description": "Personal dialer note associated with a contact lookup key.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Authentication UID of the owner."
+        },
+        "lookupKey": {
+          "type": "string",
+          "description": "Device contact lookup key."
+        },
+        "noteText": {
+          "type": "string",
+          "description": "User note text."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp (FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp (FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "lookupKey",
+        "noteText",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/entities/UserProfile"
+      },
+      "description": "Authenticated user's synced dialer profile and preferences."
+    },
+    "/users/{userId}/blocked_numbers/{blockId}": {
+      "schema": {
+        "$ref": "#/entities/SyncedBlockedNumber"
+      },
+      "description": "Per-user cloud backup of blocked caller numbers."
+    },
+    "/users/{userId}/favorite_contacts/{favoriteId}": {
+      "schema": {
+        "$ref": "#/entities/SyncedFavoriteContact"
+      },
+      "description": "Per-user cloud backup of quick favorite contacts."
+    },
+    "/users/{userId}/contact_notes/{noteId}": {
+      "schema": {
+        "$ref": "#/entities/SyncedContactNote"
+      },
+      "description": "Per-user cloud backup of local dialer notes."
+    }
+  }
+}

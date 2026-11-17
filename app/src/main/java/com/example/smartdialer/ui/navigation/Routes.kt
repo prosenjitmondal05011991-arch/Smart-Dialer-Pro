@@ -31,3 +31,6 @@ data object BlockedNumbersRoute
 
 @Serializable
 data object AppPermissionsRoute
+
+@Serializable
+data object CloudSyncRoute

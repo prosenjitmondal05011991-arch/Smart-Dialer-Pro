@@ -289,4 +289,26 @@
     <string name="permissions_explain_all_title">Allow Core Dialer Permissions</string>
     <string name="permissions_explain_all_message">Android will prompt you to allow Contacts, Call Logs, and Phone &amp; SIM permissions so Smart Dialer Pro can display your contacts, call history, T9 matches, dual-SIM selector, and direct calling.</string>
     <string name="permissions_manage_all_button">Review &amp; Grant All Permissions</string>
+
+    <!-- Cloud Sync & Backup -->
+    <string name="settings_cloud_sync_title">Cloud Sync &amp; Backup</string>
+    <string name="settings_cloud_sync_signed_in">Synced with %1$s</string>
+    <string name="settings_cloud_sync_signed_out">Sign in with Google to sync blocklist, favorites &amp; notes</string>
+    <string name="cloud_sync_title">Cloud Sync &amp; Backup</string>
+    <string name="cloud_sync_signin_title">Sign In to Sync Your Dialer</string>
+    <string name="cloud_sync_signin_body">Back up and restore your blocked numbers, quick favorites, contact notes, and recording preferences securely in your private cloud account.</string>
+    <string name="cloud_sync_google_button">Sign in with Google</string>
+    <string name="cloud_sync_signed_in_label">Signed-in Google Account</string>
+    <string name="cloud_sync_backup_button">Back Up Now</string>
+    <string name="cloud_sync_restore_button">Restore</string>
+    <string name="cloud_sync_sign_out_button">Sign Out</string>
+    <string name="cloud_sync_backup_done">Backed up %1$d items to cloud</string>
+    <string name="cloud_sync_restore_done">Restored %1$d items to this device</string>
+    <string name="cloud_sync_profile_section">Synced Recording Profile</string>
+    <string name="cloud_sync_recording_status">Auto recording: %1$s • Scope: %2$s</string>
+    <string name="cloud_sync_disabled_label">Off</string>
+    <string name="cloud_sync_blocked_section">Synced Blocked Numbers</string>
+    <string name="cloud_sync_favorites_section">Synced Quick Favorites</string>
+    <string name="cloud_sync_notes_section">Synced Contact Notes</string>
+    <string name="cloud_sync_none_backed_up">Nothing backed up yet. Tap Back Up Now to sync from this device.</string>
 </resources>

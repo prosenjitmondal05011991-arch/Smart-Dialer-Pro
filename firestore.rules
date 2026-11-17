@@ -1,0 +1,150 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidUserProfile(data) {
+      return data.userId is string && data.userId == request.auth.uid && data.userId.size() <= 128 &&
+             data.displayName is string && data.displayName.size() <= 120 &&
+             (!('email' in data) || data.email == null || (data.email is string && data.email.size() <= 254)) &&
+             data.autoCallRecordingEnabled is bool &&
+             data.callRecordingScope in ['ALL_CALLS', 'UNKNOWN_CONTACTS_ONLY'];
+    }
+
+    function isValidBlockedNumber(data) {
+      return data.userId is string && data.userId == request.auth.uid && data.userId.size() <= 128 &&
+             data.normalizedNumber is string && data.normalizedNumber.size() >= 1 && data.normalizedNumber.size() <= 32 &&
+             (!('displayLabel' in data) || data.displayLabel == null || (data.displayLabel is string && data.displayLabel.size() <= 120));
+    }
+
+    function isValidFavoriteContact(data) {
+      return data.userId is string && data.userId == request.auth.uid && data.userId.size() <= 128 &&
+             data.lookupKey is string && data.lookupKey.size() >= 1 && data.lookupKey.size() <= 256 &&
+             data.displayName is string && data.displayName.size() >= 1 && data.displayName.size() <= 120 &&
+             data.phoneNumber is string && data.phoneNumber.size() >= 1 && data.phoneNumber.size() <= 32 &&
+             (!('speedDialSlot' in data) || data.speedDialSlot == null || (data.speedDialSlot is int && data.speedDialSlot >= 1 && data.speedDialSlot <= 9));
+    }
+
+    function isValidContactNote(data) {
+      return data.userId is string && data.userId == request.auth.uid && data.userId.size() <= 128 &&
+             data.lookupKey is string && data.lookupKey.size() >= 1 && data.lookupKey.size() <= 256 &&
+             data.noteText is string && data.noteText.size() >= 1 && data.noteText.size() <= 2000;
+    }
+
+    match /users/{userId} {
+      allow get: if isOwner(userId) && isValidId(userId);
+      allow list: if isOwner(userId);
+
+      allow create: if isOwner(userId) &&
+                       isValidId(userId) &&
+                       incoming().keys().hasAll(['userId', 'displayName', 'autoCallRecordingEnabled', 'callRecordingScope', 'createdAt', 'updatedAt']) &&
+                       incoming().keys().hasOnly(['userId', 'displayName', 'email', 'autoCallRecordingEnabled', 'callRecordingScope', 'createdAt', 'updatedAt']) &&
+                       incoming().createdAt is timestamp && incoming().createdAt <= request.time &&
+                       incoming().updatedAt is timestamp && incoming().updatedAt <= request.time &&
+                       isValidUserProfile(incoming());
+
+      allow update: if isOwner(userId) &&
+                       isValidId(userId) &&
+                       isValidUserProfile(incoming()) &&
+                       incoming().userId == existing().userId &&
+                       incoming().createdAt == existing().createdAt &&
+                       incoming().updatedAt is timestamp && incoming().updatedAt <= request.time &&
+                       incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'email', 'autoCallRecordingEnabled', 'callRecordingScope', 'updatedAt']);
+
+      allow delete: if isOwner(userId) && isValidId(userId);
+
+      match /blocked_numbers/{blockId} {
+        allow get: if isOwner(userId) && isValidId(blockId);
+        allow list: if isOwner(userId);
+
+        allow create: if isOwner(userId) &&
+                         isValidId(blockId) &&
+                         incoming().keys().hasAll(['userId', 'normalizedNumber', 'createdAt', 'updatedAt']) &&
+                         incoming().keys().hasOnly(['userId', 'normalizedNumber', 'displayLabel', 'createdAt', 'updatedAt']) &&
+                         incoming().createdAt is timestamp && incoming().createdAt <= request.time &&
+                         incoming().updatedAt is timestamp && incoming().updatedAt <= request.time &&
+                         isValidBlockedNumber(incoming());
+
+        allow update: if isOwner(userId) &&
+                         isValidId(blockId) &&
+                         isValidBlockedNumber(incoming()) &&
+                         incoming().userId == existing().userId &&
+                         incoming().createdAt == existing().createdAt &&
+                         incoming().updatedAt is timestamp && incoming().updatedAt <= request.time &&
+                         incoming().diff(existing()).affectedKeys().hasOnly(['normalizedNumber', 'displayLabel', 'updatedAt']);
+
+        allow delete: if isOwner(userId) && isValidId(blockId);
+      }
+
+      match /favorite_contacts/{favoriteId} {
+        allow get: if isOwner(userId) && isValidId(favoriteId);
+        allow list: if isOwner(userId);
+
+        allow create: if isOwner(userId) &&
+                         isValidId(favoriteId) &&
+                         incoming().keys().hasAll(['userId', 'lookupKey', 'displayName', 'phoneNumber', 'createdAt', 'updatedAt']) &&
+                         incoming().keys().hasOnly(['userId', 'lookupKey', 'displayName', 'phoneNumber', 'speedDialSlot', 'createdAt', 'updatedAt']) &&
+                         incoming().createdAt is timestamp && incoming().createdAt <= request.time &&
+                         incoming().updatedAt is timestamp && incoming().updatedAt <= request.time &&
+                         isValidFavoriteContact(incoming());
+
+        allow update: if isOwner(userId) &&
+                         isValidId(favoriteId) &&
+                         isValidFavoriteContact(incoming()) &&
+                         incoming().userId == existing().userId &&
+                         incoming().createdAt == existing().createdAt &&
+                         incoming().updatedAt is timestamp && incoming().updatedAt <= request.time &&
+                         incoming().diff(existing()).affectedKeys().hasOnly(['lookupKey', 'displayName', 'phoneNumber', 'speedDialSlot', 'updatedAt']);
+
+        allow delete: if isOwner(userId) && isValidId(favoriteId);
+      }
+
+      match /contact_notes/{noteId} {
+        allow get: if isOwner(userId) && isValidId(noteId);
+        allow list: if isOwner(userId);
+
+        allow create: if isOwner(userId) &&
+                         isValidId(noteId) &&
+                         incoming().keys().hasAll(['userId', 'lookupKey', 'noteText', 'createdAt', 'updatedAt']) &&
+                         incoming().keys().hasOnly(['userId', 'lookupKey', 'noteText', 'createdAt', 'updatedAt']) &&
+                         incoming().createdAt is timestamp && incoming().createdAt <= request.time &&
+                         incoming().updatedAt is timestamp && incoming().updatedAt <= request.time &&
+                         isValidContactNote(incoming());
+
+        allow update: if isOwner(userId) &&
+                         isValidId(noteId) &&
+                         isValidContactNote(incoming()) &&
+                         incoming().userId == existing().userId &&
+                         incoming().createdAt == existing().createdAt &&
+                         incoming().updatedAt is timestamp && incoming().updatedAt <= request.time &&
+                         incoming().diff(existing()).affectedKeys().hasOnly(['lookupKey', 'noteText', 'updatedAt']);
+
+        allow delete: if isOwner(userId) && isValidId(noteId);
+      }
+    }
+  }
+}

@@ -289,4 +289,26 @@
     <string name="permissions_explain_all_title">মূল ডায়ালার অনুমতিসমূহ দিন</string>
     <string name="permissions_explain_all_message">পরিচিতি, কল লগ, T9 ম্যাচ, ডুয়াল-সিম নির্বাচন ও সরাসরি কল করার জন্য Android আপনাকে পরিচিতি, কল লগ এবং ফোন অনুমতি দেওয়ার অনুরোধ করবে।</string>
     <string name="permissions_manage_all_button">সকল অনুমতি পর্যালোচনা ও প্রদান করুন</string>
+
+    <!-- Cloud Sync & Backup -->
+    <string name="settings_cloud_sync_title">ক্লাউড সিঙ্ক ও ব্যাকআপ</string>
+    <string name="settings_cloud_sync_signed_in">%1$s-এর সাথে সিঙ্ককৃত</string>
+    <string name="settings_cloud_sync_signed_out">ব্লকলিস্ট, প্রিয় ও নোট সিঙ্ক করতে Google দিয়ে সাইন ইন করুন</string>
+    <string name="cloud_sync_title">ক্লাউড সিঙ্ক ও ব্যাকআপ</string>
+    <string name="cloud_sync_signin_title">ডায়ালার সিঙ্ক করতে সাইন ইন করুন</string>
+    <string name="cloud_sync_signin_body">আপনার ব্লক করা নম্বর, দ্রুত প্রিয় তালিকা, পরিচিতি নোট এবং রেকর্ডিং পছন্দসমূহ আপনার ব্যক্তিগত ক্লাউড অ্যাকাউন্টে নিরাপদে সংরক্ষণ ও পুনরুদ্ধার করুন।</string>
+    <string name="cloud_sync_google_button">Google দিয়ে সাইন ইন করুন</string>
+    <string name="cloud_sync_signed_in_label">সাইন-ইন করা Google অ্যাকাউন্ট</string>
+    <string name="cloud_sync_backup_button">এখনই ব্যাকআপ করুন</string>
+    <string name="cloud_sync_restore_button">পুনরুদ্ধার করুন</string>
+    <string name="cloud_sync_sign_out_button">সাইন আউট</string>
+    <string name="cloud_sync_backup_done">%1$dটি আইটেম ক্লাউডে ব্যাকআপ হয়েছে</string>
+    <string name="cloud_sync_restore_done">%1$dটি আইটেম এই ডিভাইসে পুনরুদ্ধার হয়েছে</string>
+    <string name="cloud_sync_profile_section">সিঙ্ককৃত রেকর্ডিং প্রোফাইল</string>
+    <string name="cloud_sync_recording_status">স্বয়ংক্রিয় রেকর্ডিং: %1$s • পরিসর: %2$s</string>
+    <string name="cloud_sync_disabled_label">বন্ধ</string>
+    <string name="cloud_sync_blocked_section">সিঙ্ককৃত ব্লক করা নম্বর</string>
+    <string name="cloud_sync_favorites_section">সিঙ্ককৃত দ্রুত প্রিয় তালিকা</string>
+    <string name="cloud_sync_notes_section">সিঙ্ককৃত পরিচিতি নোট</string>
+    <string name="cloud_sync_none_backed_up">এখনও কোনো ব্যাকআপ নেই। এই ডিভাইস থেকে সিঙ্ক করতে এখনই ব্যাকআপ চাপুন।</string>
 </resources>

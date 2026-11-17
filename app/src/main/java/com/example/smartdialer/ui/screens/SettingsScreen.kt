@@ -26,6 +26,7 @@ import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.AdminPanelSettings
 import androidx.compose.material.icons.filled.Block
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.ContactPage
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.FormatSize
@@ -88,6 +89,7 @@ fun SettingsScreen(
     isExportingContacts: Boolean = false,
     grantedPermissionsCount: Int = 0,
     totalPermissionsCount: Int = 5,
+    signedInAccountLabel: String? = null,
     onBack: () -> Unit,
     onThemeModeChange: (ThemeMode) -> Unit,
     onAccentColorChange: (AccentColorOption) -> Unit,
@@ -97,6 +99,7 @@ fun SettingsScreen(
     onAutoCallRecordingChange: (Boolean) -> Unit = {},
     onCallRecordingScopeChange: (CallRecordingScope) -> Unit = {},
     onExportContacts: (ContactExportFormat) -> Unit = {},
+    onOpenCloudSync: () -> Unit = {},
     onOpenAppPermissions: () -> Unit = {},
     onOpenBlockedNumbers: () -> Unit = {},
     onOpenPrivacyInfo: () -> Unit,
@@ -519,6 +522,21 @@ fun SettingsScreen(
                             }
                         },
                         testTag = "settings_export_csv_row"
+                    )
+                    HorizontalDivider(
+                        color = MaterialTheme.colorScheme.outlineVariant,
+                        modifier = Modifier.padding(horizontal = 16.dp)
+                    )
+                    SettingsRowItem(
+                        icon = Icons.Filled.CloudSync,
+                        title = stringResource(R.string.settings_cloud_sync_title),
+                        subtitle = if (!signedInAccountLabel.isNullOrBlank()) {
+                            stringResource(R.string.settings_cloud_sync_signed_in, signedInAccountLabel)
+                        } else {
+                            stringResource(R.string.settings_cloud_sync_signed_out)
+                        },
+                        onClick = onOpenCloudSync,
+                        testTag = "settings_cloud_sync_row"
                     )
                 }
             }

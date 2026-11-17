@@ -73,12 +73,14 @@ import com.example.smartdialer.SmartDialerApp
 import com.example.smartdialer.data.model.Contact
 import com.example.smartdialer.data.model.ContactDraft
 import com.example.smartdialer.data.model.SimAccount
+import com.example.smartdialer.data.firebase.GoogleAuthManager.authStateFlow
 import com.example.smartdialer.localization.LocaleHelper
 import com.example.smartdialer.permissions.PermissionHelper
 import com.example.smartdialer.telecom.DialerTelecomManager
 import com.example.smartdialer.ui.components.PermissionExplainDialog
 import com.example.smartdialer.ui.navigation.AppPermissionsRoute
 import com.example.smartdialer.ui.navigation.BlockedNumbersRoute
+import com.example.smartdialer.ui.navigation.CloudSyncRoute
 import com.example.smartdialer.ui.navigation.ContactDetailsRoute
 import com.example.smartdialer.ui.navigation.ContactsRoute
 import com.example.smartdialer.ui.navigation.DefaultDialerStatusRoute
@@ -89,6 +91,7 @@ import com.example.smartdialer.ui.navigation.RecentsRoute
 import com.example.smartdialer.ui.navigation.SettingsRoute
 import com.example.smartdialer.ui.screens.AppPermissionsScreen
 import com.example.smartdialer.ui.screens.BlockedNumbersScreen
+import com.example.smartdialer.ui.screens.CloudSyncScreen
 import com.example.smartdialer.ui.screens.ContactDetailsScreen
 import com.example.smartdialer.ui.screens.ContactEditorDialog
 import com.example.smartdialer.ui.screens.ContactsScreen
@@ -111,6 +114,9 @@ import com.example.smartdialer.viewmodel.DialerViewModelFactory
 import com.example.smartdialer.viewmodel.KeypadViewModel
 import com.example.smartdialer.viewmodel.RecentsViewModel
 import com.example.smartdialer.viewmodel.SettingsViewModel
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -243,6 +249,12 @@ private fun SmartDialerRoot(
     var grantedPermissionsCount by remember {
         mutableIntStateOf(PermissionHelper.grantedRuntimePermissionCount(context))
     }
+    val firebaseUserFlow = remember {
+        runCatching { Firebase.auth.authStateFlow() }.getOrDefault(flowOf(null))
+    }
+    val signedInUser by firebaseUserFlow.collectAsStateWithLifecycle(
+        initialValue = runCatching { Firebase.auth.currentUser }.getOrNull()
+    )
 
     // Permission Launchers
     val readContactsLauncher = rememberLauncherForActivityResult(
@@ -773,6 +785,7 @@ private fun SmartDialerRoot(
                             isExportingContacts = isExportingContacts,
                             grantedPermissionsCount = grantedPermissionsCount,
                             totalPermissionsCount = PermissionHelper.ALL_RUNTIME_PERMISSIONS.size,
+                            signedInAccountLabel = signedInUser?.email ?: signedInUser?.displayName,
                             onBack = { navController.popBackStack() },
                             onThemeModeChange = settingsViewModel::setThemeMode,
                             onAccentColorChange = settingsViewModel::setAccentColor,
@@ -788,11 +801,21 @@ private fun SmartDialerRoot(
                                     showExportPermissionRationale = format
                                 }
                             },
+                            onOpenCloudSync = { navController.navigate(CloudSyncRoute) },
                             onOpenAppPermissions = { navController.navigate(AppPermissionsRoute) },
                             onOpenBlockedNumbers = { navController.navigate(BlockedNumbersRoute) },
                             onOpenPrivacyInfo = { navController.navigate(PrivacyInfoRoute) },
                             onOpenDefaultDialerStatus = {
                                 navController.navigate(DefaultDialerStatusRoute)
+                            }
+                        )
+                    }
+
+                    composable<CloudSyncRoute> {
+                        CloudSyncScreen(
+                            onBack = { navController.popBackStack() },
+                            onShowMessage = { msg ->
+                                scope.launch { snackbarHostState.showSnackbar(msg) }
                             }
                         )
                     }
