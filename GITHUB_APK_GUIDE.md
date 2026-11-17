@@ -17,13 +17,15 @@ This guide explains how to automatically build and download **Smart Dialer Pro**
 
 ---
 
-## 2. Generate a Debug APK on GitHub (No Secrets Required)
+## 2. Generate a Debug APK on GitHub
 
 1. Push this repository to GitHub (using **Export → Push to GitHub** in AI Studio or `git push`).
-2. Open your repository on GitHub and click the **Actions** tab.
-3. Select **Build Smart Dialer Pro APK** in the left sidebar.
-4. Click **Run workflow** (or wait for any push to `main` / `master` to finish).
-5. Once **Build Debug APK** turns green, scroll down to **Artifacts** and download **Smart-Dialer-Pro-Debug-APK** (contains `Smart Dialer Pro-debug.apk`).
+2. Because Firebase config (`app/google-services.json`) may be omitted when pushing to GitHub, add it once as a GitHub secret:
+   - In AI Studio, open `app/google-services.json` and copy its full JSON text.
+   - In GitHub, open **Settings → Secrets and variables → Actions → New repository secret**.
+   - Set **Name** to `GOOGLE_SERVICES_JSON` and paste the JSON into **Secret**, then click **Add secret**.
+3. Open your repository's **Actions** tab, select **Build Smart Dialer Pro APK**, and click **Run workflow**.
+4. Once **Build Debug APK** turns green, scroll down to **Artifacts** and download **Smart-Dialer-Pro-Debug-APK** (contains `Smart Dialer Pro-debug.apk`).
 
 ---
 

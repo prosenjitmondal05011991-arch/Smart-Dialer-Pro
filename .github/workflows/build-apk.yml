@@ -74,6 +74,29 @@ jobs:
               -dname "CN=Android Debug,O=Android,C=US"
           fi
 
+      - name: Prepare google-services.json
+        env:
+          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: |
+          if [ -f app/google-services.json ]; then
+            echo "Found app/google-services.json in repository."
+          elif [ -n "$GOOGLE_SERVICES_JSON" ]; then
+            TRIMMED="$(printf '%s' "$GOOGLE_SERVICES_JSON" | sed 's/^[[:space:]]*//')"
+            if [[ "$TRIMMED" == \{* ]]; then
+              printf '%s\n' "$GOOGLE_SERVICES_JSON" > app/google-services.json
+            else
+              printf '%s' "$GOOGLE_SERVICES_JSON" | tr -d '\n\r ' | base64 -d > app/google-services.json
+            fi
+            echo "Restored app/google-services.json from GOOGLE_SERVICES_JSON secret."
+          else
+            {
+              echo "### Missing app/google-services.json"
+              echo "Add a GitHub Actions repository secret named \`GOOGLE_SERVICES_JSON\` containing the contents of \`app/google-services.json\` from AI Studio, then re-run this workflow."
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::app/google-services.json is missing. Add the GOOGLE_SERVICES_JSON repository secret in GitHub Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+
       - name: Build Debug APK
         run: |
           set -o pipefail
@@ -158,6 +181,25 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: "9.3.1"
+
+      - name: Prepare google-services.json
+        if: steps.check_secrets.outputs.has_signing == 'true'
+        env:
+          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        run: |
+          if [ -f app/google-services.json ]; then
+            echo "Found app/google-services.json in repository."
+          elif [ -n "$GOOGLE_SERVICES_JSON" ]; then
+            TRIMMED="$(printf '%s' "$GOOGLE_SERVICES_JSON" | sed 's/^[[:space:]]*//')"
+            if [[ "$TRIMMED" == \{* ]]; then
+              printf '%s\n' "$GOOGLE_SERVICES_JSON" > app/google-services.json
+            else
+              printf '%s' "$GOOGLE_SERVICES_JSON" | tr -d '\n\r ' | base64 -d > app/google-services.json
+            fi
+          else
+            echo "::error::app/google-services.json is missing. Add the GOOGLE_SERVICES_JSON repository secret."
+            exit 1
+          fi
 
       - name: Decode release keystore
         if: steps.check_secrets.outputs.has_signing == 'true'
